@@ -26,7 +26,7 @@ $current_user = User::get();
 
 if (is_null($current_user)) {
 	$statusnet_module = UserBaseModule::get('statusnet');
-	$statusnet_module->renderRegistrationForm(false, null, array('returnto' => UserConfig::$SITEROOTURL));
+	$statusnet_module->renderRegistrationForm(true, null, array('returnto' => UserConfig::$SITEROOTURL));
 } else {
 	$statusnet_creds = $current_user->getUserCredentials('statusnet');
 
